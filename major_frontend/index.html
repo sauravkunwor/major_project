@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image to Poem Generator</title>
+    <script src="script.js" defer type="module"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header">
+        <h1>Image to Poem</h1>
+        <h3>Generate Poem from Image</h3>
+      </div>
+      <div class="description">
+        The poem generator will enable you to create poems inspired by any image
+        you upload. With a simple click, the tool crafts a unique poem, and you
+        can effortlessly copy it to your clipboard
+      </div>
+      <div class="input-container" id="image-input">
+        <input
+          type="file"
+          id="file-input"
+          class="file-input-hidden"
+          accept="image/jpeg, image/png, image/jpg"
+        />
+
+        <img src="#" alt="" id="uploaded-image" class="uploaded-image hidden" />
+        <div class="file-input" id="drag">
+          <div>
+            <p class="plus">(&#43;)</p>
+            <span>Drag file(s) here to view</span>
+          </div>
+        </div>
+      </div>
+      <div class="submit hidden" id="submit">
+        <button class="submit" id="submit_button">Generate Poem</button>
+      </div>
+      <div class="poem-container">
+        <p>Generated Poem</p>
+        <div class="generated-poem" id="poem"></div>
+      </div>
+      <div class="submit">
+        <button id="copy-poem">Copy Poem</button>
+      </div>
+    </div>
+
+    <div class="space"></div>
+  </body>
+</html>
