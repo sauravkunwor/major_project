@@ -35,7 +35,7 @@ def upload_image(request):
             response = ollama.chat(model='mistral', messages=[
                 {
                     'role': 'user',
-                    'content': f'Generate a poem for: {processed_text}',
+                    'content': f'Generate a short and simple poem of 2 stanzas and 4 lines for : {processed_text}',
                 },
             ])
             return JsonResponse({"status": "success", "message": response['message']['content']})
